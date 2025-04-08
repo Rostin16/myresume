@@ -1,0 +1,33 @@
+.squre{
+	width:80px;
+	height:80px;
+	border:2px solid black;
+	margin: -2px;
+	font-size:60px;
+	
+}
+.container1{
+	float:left;
+}
+.container2{
+	float:left;
+}
+.white{
+	background-color:white;
+	color:black;
+	text-align:center;
+}
+.black{
+	background-color:black;
+	color:white;
+	text-align:center;
+}
+.chessboard{
+	float:left;
+	border: 2px solid black;
+}
+
+.board{
+	margin:30px 355px;
+	position:relative;
+}

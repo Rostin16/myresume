@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Recipe</title>
+
+  <!-- css -->
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- bootstrap -->
+    <link rel="stylesheet" href="assets/css/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+
+    <!-- remixicon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css"
+    integrity="sha512-OQDNdI5rpnZ0BRhhJc+btbbtnxaj+LdQFeh0V9/igiEPDiWE2fG+ZsXl0JEH+bjXKPJ3zcXqNyP4/F/NegVdZg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <div class="title">
+    <h3>Recipe Book </h3>
+</div>
+<div class="table-box">
+    <table>
+        <tr>
+            <th>Title</th>
+            <th>Ingrediants</th>
+            <th>Instructions</th>
+            <th>Cuisine</th>
+            <th style="border-right: 0;">Actions</th>
+        </tr>
+        <tbody id="table-data"></tbody>
+    </table>
+</div>
+<div class="add-button">
+  <button id="add-btn" onclick="new Recipe().Add();"><i class="fa-solid fa-plus"></i> Add New Recipe</button>
+</div>
+<form action="" class="form-control text-white form" style="width: 75%; padding-top: 65px;  border: 2px solid #022644; 
+margin: auto;" name="form" id="form1">
+
+    <div class="row" style="padding: 30px; ">
+        <div class="mb-2 row">
+            <label for="" class="col-2 col-form-label fs-5" style=" font-weight: 900;">Title :</label>
+            <div class="col-10">
+                <input type="text" class="form-control" id="title" name="name" required>
+            </div>
+        </div>
+        <div class="mb-2 row">
+            <label for="" class="col-2 col-form-label fs-5"  style=" font-weight: 900;">Ingrediant :</label>
+            <div class="col-10">
+                <input type="text" class="form-control" id="ing" required>
+            </div>
+        </div>
+        <div class="mb-2 row">
+          <label for="" class="col-2 col-form-label fs-5"  style=" font-weight: 900;">Instruction :</label>
+          <div class="col-10">
+              <input type="text" class="form-control" id="inst" required>
+          </div>
+        </div>
+       
+        <div class="mt-3 row">
+            <label for="" class="col-2 fs-5"  style=" font-weight: 900;">Cuisine Type : </label>
+            <div class="col-10">
+                <select name="" id="cuisine" class="form-select" required>
+                    <option selected>Select Cusisines</option>
+                    <option value="indian">North Indian</option>
+                    <option value="chinese">Chinese</option>
+                    <option value="mexican">Mexican Cuisine</option>
+                    <option value="italian">Italian Cuisine</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="mt-3 row">
+            <div class="col">
+                <button type="button" class="btn btn-danger ps-4 pe-4" id="submit"
+                    onclick="new Recipe().AddUpdate();">Submit</button>
+                <button type="button" class="btn btn-danger ps-4 pe-4" id="cancel" 
+                class="btn-close">Cancel</button>
+            </div>
+        </div>
+    </div>
+</form>
+ 
+  <!-- js -->
+
+  <script src="assets/js/final.js"></script>
+
+</body>
+
+</html>

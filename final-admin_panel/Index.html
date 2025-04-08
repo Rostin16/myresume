@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin_Panel</title>
+  <!-- Icons -->
+  <link rel="stylesheet" href="Asset/Css/all.min.css" />
+  <!-- Css -->
+  <link rel="stylesheet" href="Asset/Css/Style.css" />
+  <!-- Favicon -->
+  <link rel="icon" href="Asset/Images/favicon.jpg" />
+  <!-- Font -->
+  <link rel="stylesheet" href="Asset/Extra/Fonts/stylesheet.css" />
+  <!--map css start -->
+  <script src="https://code.highcharts.com/maps/highmaps.js"></script>
+  <script src="https://code.highcharts.com/maps/modules/exporting.js"></script>
+  <script src="https://code.highcharts.com/mapdata/countries/in/in-all.js"></script>
+  <!-- map css end -->
+  <!-- media -->
+  <link rel="stylesheet" href="Asset/Css/media.css">
+
+</head>
+
+<body>
+  <div class="cursor"></div>
+  <!------------------------------------------ Header Start ----------------------------------------------------------------->
+  <header>
+    <section class="header d-flex align-center justify-between">
+      <!-- -------Left-info--- -->
+      <div>
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder="Find Something..." class="find">
+      </div>
+      <!------- Right-info ------>
+      <div class="right d-flex align-center">
+        <div class="admin-content">
+          <a href="JavaScript:void(0)">
+            <div class="d-flex">
+              <div>
+                <h2>Stevne Zone</h2>
+                <span>Admin</span>
+              </div>
+              <div>
+                <i class="fa-solid fa-caret-down"></i>
+              </div>
+              <img src="Asset/Images/admin.jpg" alt="">
+            </div>
+            <!-- -----------------stevne zone-------------- -->
+            <!------------------ steve zone dropdown------------- -->
+            <div class="profile">
+              <h2>Stevne Zone</h2>
+              <ul>
+                <li><i class="fa-regular fa-user"></i>My Profile</li>
+                <li><i class="fa-solid fa-list-check"></i>Task</li>
+                <li><i class="fa-regular fa-comment-dots"></i>Message</li>
+                <li><i class="fa-solid fa-gear"></i>Account Settings</li>
+                <li><i class="fa-solid fa-power-off"></i>Log Out</li>
+              </ul>
+            </div>
+          </a>
+        </div>
+        <!-- ---------------language dropdown--------------------- -->
+        <div class="language d-flex">
+          <a href="JavaScript:void(0)">
+            <div class="d-flex">
+              <i class="fa-solid fa-earth-asia"></i>
+              <h3>EN</h3>
+              <b><i class="fa-solid fa-chevron-down"></i></b>
+            </div>
+          </a>
+          <div class="lang-types">
+            <ul>
+              <li>English</li>
+              <li>Spanish</li>
+              <li>Franches</li>
+              <li>Chiness</li>
+            </ul>
+          </div>
+        </div>
+        <!-- settings -->
+        <div class="settings">
+          <a href="JavaScript:void(0)"><i class="fa-solid fa-gear"></i></a>
+        </div>
+        <!-- logout button -->
+        <a href="./LogIn_form/Index.html"><button class="logout">LogOut</button></a>
+
+    </section>
+  </header>
+  <!-- <div>
+    <h3>Admin Dashboard</h3>
+    <span>Home <i class="fa-solid fa-angle-right"></i> Admin</span>
+  </div> -->
+
+  <!------------------------------------------ aside start ------------------------------------------------------------------->
+  <aside>
+    <div class="logo d-flex wrap justify-around justify-baseline align-center">
+      <img src="Asset/Images/logo.png" alt="" class="logo_img">
+      <i class="fa-solid fa-bars-staggered"></i>
+    </div>
+    <!------------------------------------------aside-menu start ------------------------------------------------------------->
+    <div class="sidebar">
+      <div class="menu">
+        <ul class="details">
+          <!-- Dashboard start -->
+          <li class="nav-list padding">
+            <a href="JavaScript:void(0)" class="nav-link">
+              <i class="fa-solid fa-gauge-high center"></i>
+              <span class="nav-title">Dashboard</span>
+              <i class="fa-solid fa-angle-right"></i>
+            </a>
+          </li>
+          <ul class="dropdown">
+            <li><i class="fa-solid fa-chevron-right"></i>Admin</li>
+            <li><i class="fa-solid fa-chevron-right"></i>Students</li>
+            <li><i class="fa-solid fa-chevron-right"></i>Parents</li>
+            <li><i class="fa-solid fa-chevron-right"></i>Teachers</li>
+          </ul>
+          <!-- Dashboard end -->
+          <!-- Students start -->
+          <li class="nav-list padding">
+            <a href="JavaScript:void(0)" class="nav-link">
+              <i class="fa-solid fa-user-graduate center"></i>
+              <span class="nav-title">Students</span>
+              <i class="fa-solid fa-angle-right"></i>
+            </a>
+          </li>
+          <ul class="dropdown">
+            <li><i class="fa-solid fa-chevron-right"></i>All Students</li>
+            <li><i class="fa-solid fa-chevron-right"></i>Student details</li>
+            <li><i class="fa-solid fa-chevron-right"></i>Admision Form</li>
+            <li><i class="fa-solid fa-chevron-right"></i>Student Promotion</li>
+          </ul>
+          <!-- Students End -->
+          <!-- Teachers Start -->
+          <li class="nav-list padding">
+            <a href="JavaScript:void(0)" class="nav-link">
+              <i class="fa-solid fa-users center"></i>
+              <span class="nav-title">Teachers</span>
+              <i class="fa-solid fa-angle-right"></i>
+            </a>
+          </li>
+          <ul class="dropdown">
+            <li><i class="fa-solid fa-chevron-right"></i>Admin</li>
+            <li><i class="fa-solid fa-chevron-right"></i>Students</li>
+            <li><i class="fa-solid fa-chevron-right"></i>Parents</li>
+            <li><i class="fa-solid fa-chevron-right"></i>Teachers</li>
+          </ul>
+          <!-- Teacher End -->
+          <!-- Parents Start -->
+          <li class="nav-list padding">
+            <a href="JavaScript:void(0)" class="nav-link">
+              <i class="fa-solid fa-user-large center"></i>
+              <span class="nav-title">Parents</span>
+              <i class="fa-solid fa-angle-right"></i>
+            </a>
+          </li>
+          <ul class="dropdown">
+            <li><i class="fa-solid fa-chevron-right"></i>Admin</li>
+            <li><i class="fa-solid fa-chevron-right"></i>Students</li>
+            <li><i class="fa-solid fa-chevron-right"></i>Parents</li>
+            <li><i class="fa-solid fa-chevron-right"></i>Teachers</li>
+          </ul>
+          <!-- Parents End -->
+          <!-- Library Start -->
+          <li class="nav-list padding">
+            <a href="JavaScript:void(0)" class="nav-link">
+              <i class="fa-solid fa-book center"></i>
+              <span class="nav-title">Library</span>
+              <i class="fa-solid fa-angle-right"></i>
+            </a>
+          </li>
+          <ul class="dropdown">
+            <li><i class="fa-solid fa-chevron-right"></i>Admin</li>
+            <li><i class="fa-solid fa-chevron-right"></i>Students</li>
+            <li><i class="fa-solid fa-chevron-right"></i>Parents</li>
+            <li><i class="fa-solid fa-chevron-right"></i>Teachers</li>
+          </ul>
+          <!-- Library End -->
+          <!-- Accounts Start -->
+          <li class="nav-list padding">
+            <a href="JavaScript:void(0)" class="nav-link">
+              <i class="fa-solid fa-calculator center"></i>
+              <span class="nav-title">Accounts</span>
+              <i class="fa-solid fa-angle-right"></i>
+            </a>
+          </li>
+          <ul class="dropdown">
+            <li><i class="fa-solid fa-chevron-right"></i>Admin</li>
+            <li><i class="fa-solid fa-chevron-right"></i>Students</li>
+            <li><i class="fa-solid fa-chevron-right"></i>Parents</li>
+            <li><i class="fa-solid fa-chevron-right"></i>Teachers</li>
+          </ul>
+          <!-- Accounts End -->
+          <!-- Class Start -->
+          <li class="nav-list padding">
+            <a href="JavaScript:void(0)" class="nav-link">
+              <i class="fa-solid fa-pen-ruler center"></i>
+              <span class="nav-title">Class</span>
+              <i class="fa-solid fa-angle-right"></i>
+            </a>
+          </li>
+          <ul class="dropdown">
+            <li><i class="fa-solid fa-chevron-right"></i>Admin</li>
+            <li><i class="fa-solid fa-chevron-right"></i>Students</li>
+            <li><i class="fa-solid fa-chevron-right"></i>Parents</li>
+            <li><i class="fa-solid fa-chevron-right"></i>Teachers</li>
+          </ul>
+          <!-- Class End -->
+          <!-- Subjects Start -->
+          <li class="nav-list padding">
+            <a href="JavaScript:void(0)" class="nav-link">
+              <i class="fa-solid fa-book-open center"></i>
+              <span class="nav-title">Subjects</span>
+              <i class="fa-solid fa-angle-right"></i>
+            </a>
+          </li>
+          <!-- Subjects End -->
+          <!-- Class-routine Start -->
+          <li class="nav-list padding">
+            <a href="JavaScript:void(0)" class="nav-link">
+              <i class="fa-solid fa-gauge-high center"></i>
+              <span class="nav-title">Class-routine</span>
+              <i class="fa-solid fa-angle-right"></i>
+            </a>
+          </li>
+          <!--  Class-routine End -->
+          <!-- Attendance Start -->
+          <li class="nav-list padding">
+            <a href="JavaScript:void(0)" class="nav-link">
+              <i class="fa-solid fa-gauge-high center"></i>
+              <span class="nav-title">Attendance</span>
+              <i class="fa-solid fa-angle-right"></i>
+            </a>
+          </li>
+          <!-- Attendance End -->
+          <!-- Exams Start -->
+          <li class="nav-list padding">
+            <a href="JavaScript:void(0)" class="nav-link">
+              <i class="fa-solid fa-gauge-high center"></i>
+              <span class="nav-title">Exams</span>
+              <i class="fa-solid fa-angle-right"></i>
+            </a>
+          </li>
+          <ul class="dropdown">
+            <li><i class="fa-solid fa-chevron-right"></i>Admin</li>
+            <li><i class="fa-solid fa-chevron-right"></i>Students</li>
+          </ul>
+          <!-- Exams End -->
+          <!--Tranport Start -->
+          <li class="nav-list padding">
+            <a href="JavaScript:void(0)" class="nav-link">
+              <i class="fa-solid fa-gauge-high center"></i>
+              <span class="nav-title">Tranport</span>
+              <i class="fa-solid fa-angle-right"></i>
+            </a>
+          </li>
+          <!-- Transport End -->
+          <!-- Hostels Start -->
+          <li class="nav-list padding">
+            <a href="JavaScript:void(0)" class="nav-link">
+              <i class="fa-solid fa-gauge-high center"></i>
+              <span class="nav-title">Hostels</span>
+              <i class="fa-solid fa-angle-right"></i>
+            </a>
+          </li>
+          <!-- Hostels End -->
+          <!-- Notice Start -->
+          <li class="nav-list padding">
+            <a href="JavaScript:void(0)" class="nav-link">
+              <i class="fa-solid fa-gauge-high center"></i>
+              <span class="nav-title">Notice</span>
+              <i class="fa-solid fa-angle-right"></i>
+          </li>
+          <!-- Notice End -->
+          <!-- Messages Start -->
+          <li class="nav-list padding">
+            <a href="JavaScript:void(0)" class="nav-link">
+              <i class="fa-solid fa-gauge-high center"></i>
+              <span class="nav-title">Messages</span>
+              <i class="fa-solid fa-angle-right"></i>
+            </a>
+          </li>
+          <!-- Messages End -->
+          <!-- UI elemtns Start -->
+          <li class="nav-list padding">
+            <a href="JavaScript:void(0)" class="nav-link">
+              <i class="fa-solid fa-gauge-high center"></i>
+              <span class="nav-title">UI elemtns</span>
+              <i class="fa-solid fa-angle-right"></i>
+            </a>
+          </li>
+          <!-- UI elemtns End -->
+          <!-- Maps Start -->
+          <li class="nav-list padding">
+            <a href="JavaScript:void(0)" class="nav-link">
+              <i class="fa-solid fa-gauge-high center"></i>
+              <span class="nav-title">Map</span>
+              <i class="fa-solid fa-angle-right"></i>
+            </a>
+          </li>
+          <!-- Maps End -->
+          <!--Accounts Start -->
+          <li class="nav-list padding">
+            <a href="JavaScript:void(0)" class="nav-link">
+              <i class="fa-solid fa-gauge-high center"></i>
+              <span class="nav-title">Accounts</span>
+              <i class="fa-solid fa-angle-right"></i>
+            </a>
+          </li>
+          <!--Accounts End -->
+        </ul>
+      </div>
+
+
+    </div>
+  </aside>
+  <!--------------------------------------------- aside end----------------------------------->
+  <!------------------------------------------- body-area start -------------------------------->
+<div class="admin_dashboard">
+<h2 class="admin">Admin Dashboard</h2>
+<div class="home1"> 
+  <a href="#">Home</a>
+   <i class="fa-solid fa-chevron-right"></i>
+   <a href="#">Admin</a>
+</div>
+</div>
+
+  <section class="body-area">
+
+    <div class="card dashboard-summery-one d-flex justify-between align-center">
+      <div class="child">
+        <i class="fa-solid fa-children"></i>
+      </div>
+      <div>
+        <span class="gray"> Students</span>
+        <h2 class="mb-2">150000</h2>
+      </div>
+
+    </div>
+    <div class="card dashboard-summery-one d-flex justify-between align-center">
+      <div class="teach">
+        <i class="fa-solid fa-people-group"></i>
+      </div>
+      <div>
+        <span class="gray">Teachers</span>
+        <h2 class="mb-2">2250</h2>
+      </div>
+
+    </div>
+    <div class="card dashboard-summery-one d-flex justify-between align-center">
+      <div class="parents">
+        <i class="fa-solid fa-user-group"></i>
+      </div>
+      <div>
+        <span class="gray">Parents</span>
+        <h2 class="mb-2">5690</h2>
+      </div>
+    </div>
+    <div class="card dashboard-summery-one d-flex justify-between align-center">
+      <div class="earn">
+        <i class="fa-solid fa-money-bill-1"></i>
+      </div>
+      <div>
+        <span class="gray">Earnings</span>
+        <h2 class="mb-2">$193000</h2>
+      </div>
+    </div>
+    <div class="card dashboard-card-ONE">
+      <div class="d-flex justify-between mb-5">
+        <h2>Earnings</h2>
+        <i class="fa-solid fa-ellipsis"></i>
+      </div>
+      <div id="chartb"></div>
+    </div>
+    <div class="card dashboard-card-TWO">
+      <div class="d-flex justify-between mb-5">
+        <h2>Expenses</h2>
+        <i class="fa-solid fa-ellipsis"></i>
+      </div>
+      <div id="chart"></div>
+    </div>
+    <!-- ------------------------------------donut chart start ----------------------------->
+    <div class="card dashboard-card-THREE">
+      <div class="d-flex justify-between mb-5">
+        <h2>Students</h2>
+        <i class="fa-solid fa-ellipsis"></i>
+      </div>
+      <div id="chartc"></div>
+    </div>
+    <!-- --------------------------------------------donut chart end-------------------------->
+    <!-- --------------------------------Calender start-------------------------------------- -->
+    <div class="card dashboard-card-FOUR">
+      <!-- <div class="d-flex justify-between">
+        <h2>Event Calender</h2>
+        <i class="fa-solid fa-ellipsis"></i>
+      </div> -->
+      <div class="cal">
+        <div class="calendar">
+          <div class="front">
+            <div class="current-date">
+              <h1>Friday 15th</h1>
+              <h1>January 2016</h1>
+            </div>
+
+            <div class="current-month">
+              <ul class="week-days">
+                <li>MON</li>
+                <li>TUE</li>
+                <li>WED</li>
+                <li>THU</li>
+                <li>FRI</li>
+                <li>SAT</li>
+                <li>SUN</li>
+              </ul>
+
+              <div class="weeks">
+                <div class="first">
+                  <span class="last-month">28</span>
+                  <span class="last-month">29</span>
+                  <span class="last-month">30</span>
+                  <span class="last-month">31</span>
+                  <span>01</span>
+                  <span>02</span>
+                  <span>03</span>
+                </div>
+
+                <div class="second">
+                  <span>04</span>
+                  <span>05</span>
+                  <span class="event">06</span>
+                  <span>07</span>
+                  <span>08</span>
+                  <span>09</span>
+                  <span>10</span>
+                </div>
+
+                <div class="third">
+                  <span>11</span>
+                  <span>12</span>
+                  <span>13</span>
+                  <span>14</span>
+                  <span class="active">15</span>
+                  <span>16</span>
+                  <span>17</span>
+                </div>
+
+                <div class="fourth">
+                  <span>18</span>
+                  <span>19</span>
+                  <span>20</span>
+                  <span>21</span>
+                  <span>22</span>
+                  <span>23</span>
+                  <span>24</span>
+                </div>
+
+                <div class="fifth">
+                  <span>25</span>
+                  <span>26</span>
+                  <span>27</span>
+                  <span>28</span>
+                  <span>29</span>
+                  <span>30</span>
+                  <span>31</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="back">
+            <input placeholder="What's the event?">
+            <div class="info">
+              <div class="date">
+                <p class="info-date">
+                  Date: <span>Jan 15th, 2016</span>
+                </p>
+                <p class="info-time">
+                  Time: <span>6:35 PM</span>
+                </p>
+              </div>
+              <div class="address">
+                <p>
+                  Address: <span>129 W 81st St, New York, NY</span>
+                </p>
+              </div>
+              <div class="observations">
+                <p>
+                  Observations: <span>Be there 15 minutes earlier</span>
+                </p>
+              </div>
+            </div>
+
+            <div class="actions">
+              <button class="save">
+                Save <i class="ion-checkmark"></i>
+              </button>
+              <button class="dismiss">
+                Dismiss <i class="ion-android-close"></i>
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!-- --------------------------------Calender end---------------------------------------->
+    <!----------------------------------- Web traffic start ---------------------------------->
+    <div class="card dashboard-card-FIVE">
+      <div class="d-flex justify-between ">
+        <h2>Web Traffic</h2>
+        <i class="fa-solid fa-ellipsis" id="traffic"></i>
+      </div>
+      <div>
+        <span>Unique Visitors</span>
+        <h2 class="visiter">2,590</h2>
+      </div>
+      <!----------------- range -------------->
+      <div class="d-flex">
+        <div class="green">
+        </div>
+        <div class="blue">
+        </div>
+        <div class="yellow">
+        </div>
+        <div class="red">
+        </div>
+      </div>
+      <!---------------chart-pie start-------------- -->
+      <div id="chart-pie">
+      </div>
+    </div>
+    <!-- ----------------------------------web trafic end---------------------------------- -->
+    <div class="card dashboard-card-SIX">
+      <div class="card-body">
+        <div class="d-flex justify-between mt-mb-10">
+          <h2>Notice Board</h2>
+          <i class="fa-solid fa-ellipsis"></i>
+        </div>
+        <div class="notice-box">
+          <!--------Notice list-1 start-------->
+          <div class="notice-list ">
+            <div class="post-date bg-pink wrap">16 June,2019
+            </div>
+            <h6><a href="#">Great School manag mene esom text of the printing.</a></h6>
+            <div class="entry-meta">
+              Jennyfar Lopez /
+              <span>
+                5 min ago
+              </span>
+            </div>
+          </div>
+            <!--------Notic list-1 end ------------>
+            <!--------Notice list-2 start---------->
+            <div class="notice-list">
+              <div class="post-date bg-skyblue wrap">16 June,2019</div>
+              <h6><a href="#">Great School manag printing.</a></h6>
+              <div class="entry-meta">
+                Jennyfar Lopez /
+                <span>
+                  5 min ago
+                </span>
+              </div>
+            </div>
+
+              <!-------Notic list-2 end ---------->
+              <!-------Notic list-3 start ---------->
+              <div class="notice-list">
+                <div class="post-date bg-yellow wrap">16 June,2019</div>
+                <h6><a href="#">Great School manag meneesom.</a></h6>
+                <div class="entry-meta">
+                  Jennyfar Lopez /
+                  <span>
+                    5 min ago
+                  </span>
+                </div>
+              </div>
+                <!-------Notic list-3 end ---------->
+                <!-------Notic list-4 start---------->
+                <div class="notice-list">
+                  <div class="post-date bg-pink wrap">16 June,2019</div>
+                  <h6><a href="#">Great School manag mene esom text of the printing.</a></h6>
+                  <div class="entry-meta">
+                    Jennyfar Lopez /
+                    <span>
+                      5 min ago
+                    </span>
+                  </div>
+                </div>
+                  <!-------Notic list-4 end---------->
+                  <!-------Notic list-5 start ---------->
+                  <div class="notice-list">
+                    <div class="post-date bg-blue wrap">16 June,2019</div>
+                    <h6><a href="#">Great School manag printing.</a></h6>
+                    <div class="entry-meta">
+                      Jennyfar Lopez /
+                      <span>
+                        5 min ago
+                      </span>
+                    </div>
+                  </div>
+                    <!-------Notic list-5 end ---------->
+                    <!-------Notic list-6 start ---------->
+                    <div class="notice-list">
+                      <div class="post-date bg-yellow wrap">16 June,2019</div>
+                      <h6><a href="#">Great School manag meneesom.</a></h6>
+                      <div class="entry-meta">
+                        Jennyfar Lopez /
+                        <span>
+                          5 min ago
+                        </span>
+                      </div>
+                    </div>
+                      <!-------Notic list-6 end ---------->
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+
+              </div>
+              <!----------------------------------------- social media start--------------------------------------------->
+              <div class="card dashboard-card-SEVEN text-center">
+                <div class="d-flex justify-center mt-mb-10">
+                  <i class="fa-brands fa-facebook-f"></i>
+                  <span class="fb"> Like us on Facebook</span>
+                </div>
+                <div>
+                  <h2 class="fw">30,000</h2>
+                </div>
+              </div>
+              <div class="card dashboard-card-EIGHT text-center">
+                <div class="d-flex justify-center mt-mb-10">
+                  <i class="fa-brands fa-twitter"></i>
+                  <span class="twit"> Like us on Twitter</span>
+                </div>
+                <div>
+                  <h2 class="fw">1,11,000</h2>
+                </div>
+              </div>
+              <div class="card dashboard-card-NINE text-center">
+                <div class="d-flex justify-center mt-mb-10">
+                  <i class="fa-brands fa-google-plus-g"></i>
+                  <span class="gplus"> Like us on Googleplus</span>
+                </div>
+                <div>
+                  <h2 class="fw">19,000</h2>
+                </div>
+              </div>
+              <div class="card dashboard-card-TEN text-center">
+                <div class="d-flex justify-center mt-mb-10">
+                  <i class="fa-brands fa-linkedin-in"></i>
+                  <span class="in"> Like us on Linked</span>
+                </div>
+                <div>
+                  <h2 class="fw">45,000</h2>
+                </div>
+         </div>
+      </div>
+  </section>
+<!-- </section> -->
+
+
+
+  <!-- JQ -->
+  <script src="Asset/Js/code.jquery.com_jquery-3.7.1.min.js"></script>
+  <script src="echarts.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+  <!-- calender js start -->
+  <script src="Asset/Js/calender.js"></script>
+
+  <!--apexcharts  -->
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+  <script src="Asset/Js/apexcharts.js"></script>
+  <!-- JS -->
+  <script src="Asset/Js/Main.js"></script>
+
+</body>
+
+</html>

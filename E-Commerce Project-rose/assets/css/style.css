@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Times New Roman', Times, serif;
+}
+.cart{
+    bottom: 5px;
+
+}
+
+.video-1{
+    height: 35rem;
+    scale: 1.78;
+}
+.text{
+    top: 50%;
+    left: 40%;
+}
+
+.img-hover{
+    transition: all .5s ease-out 0s;
+}
+.img-hover:hover{
+    transform: translateY(-20px);
+    transition: all 0.5s linear;
+   
+}
+.img-hover2:hover{
+    transform: translateY(-20px);
+    transition: all 1s linear;
+}
+.img-hover2{
+    transition: all 1s ease-out 0s;
+}
+
+.banner{
+    background-image: url(../Images/banners/banner1.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 5rem 0;
+    text-align: center;
+    
+}
+.banner-2{
+    background-image: url(../Images/banners/blue.jpg.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 5rem 0;
+    text-align: center;
+    height: 50rem;
+    position: relative;
+}
+
+.mt-50{
+margin-top: 150px;
+}
+
+.mx-50{
+    margin-left: 300px;
+}
+/* -------Gemstone start-------- */
+.Jwel:hover li{
+    color: red !important;
+}
+.mny{
+    height: 180px;
+}
+.gemstone img{
+    transition: all 0.5s linear;
+  }
+  .gemstone a:hover img{
+    transform: translateY(-20px);
+    transition: all 0.5s linear;
+  }
+/* -------Gemstone end-------- */
+#newsltr:hover #newsltr{
+    background-color: red;
+}
+
